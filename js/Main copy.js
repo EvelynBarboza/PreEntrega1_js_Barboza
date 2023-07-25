@@ -3,13 +3,11 @@
 alert("Bienvenidos a ADIVINA EL NUMERO")
 
 
-//LLAMO A LA FUNCION
-//let tope = contador
-//for (let contador=0; contador < ; contador +=1)
-//let mostrar = miarray [contador]
-//console.log ("Intentos", contador.slice (0,2))
 
-//console.log (datosJugador.nombre)
+/*let tope = contador
+for (let contador=0; contador < ; contador +=1)
+let mostrar = mi Array [contador]*/
+
 
 //LLAMO A LA FUNCION
 adivinarNumero()
@@ -19,20 +17,21 @@ function adivinarNumero() {
     let datosJugador = {
         nombre: prompt("Ingresa tu nombre"),
         apellido: prompt("Ingresa tu apellido")
-    } 
+    }
     let numeroX = Math.ceil(Math.random()*10);
     console.log(numeroX)
     let ganaste = 0
     for (let i=0; i < 3; i +=1) {
         let intento = Number(prompt("Ingresa un nùmero"));
-        /*const listaI = new Array[3];
+        const listaI = new Array[3];
         listaI.push(intento)
-        console.log(intento)*/
+        console.log(intento)
         //let ok = validarNumero(numeroX)
         if (numeroX == intento) {
             alert("Felicidades, Ganaste");
             ganaste = 1
             break;
+            
         }else{ 
             if (numeroX > intento) {
                 console.log(datosJugador.nombre + " debes ingresar un nùmero mayor");
@@ -43,8 +42,7 @@ function adivinarNumero() {
     }
     if (ganaste === 0) {
         alert("GAME OVER")
-    } 
+    }
     return;
 }
-
 //FIN DEL JUEGO
